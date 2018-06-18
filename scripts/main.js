@@ -45,3 +45,14 @@ const displayController = (() => {
   };
   return { display };
 })();
+
+const addClickEvents = (() => {
+  let cells = document.getElementsByClassName("cell");
+  for(let index = 0; index < 9; index++){
+    cells[index].addEventListener("click",function(){
+      let cellId = this.id[5];
+      console.log(cellId);
+    });
+  };
+  return true;
+})();
