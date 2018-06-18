@@ -56,14 +56,20 @@ const addClickEvents = (() => {
 })();
 
 const game = (players) => {
-  let turns   = 0;
-  let board   = gameBoard;
+  let turns    = 0;
+  let board    = gameBoard;
+  let gameOver = false;
 
   const move = (cellId) => {
     let newMove = players[turns%2].move(board, cellId);
     displayController.display(board);
     if (newMove) {
-      console.log(checkWinner());
+      gameOver = checkWinner();
+      if (gameOver) {
+        displayResult(`${players[turns%2].name} won!`);
+      }else if ( turns > 7) {
+        displayResult("its a tie");
+      }
       turns++;
     };
   };
@@ -114,6 +120,12 @@ const game = (players) => {
 
     return false;
   }
+  const displayResult = (result) => {
+    let resultHTML = document.getElementById('resultHTML');
+    resultHTML.innerText = result;
+    return true;
+  };
+
   return { players, turns, board, move };
 };
 

@@ -17,3 +17,8 @@ body{
 .cell:hover {
   background-color: blue;
 }
+#resultHTML {
+  width: 300px;
+  margin: 0 auto;
+  font-size: 20px;
+}
