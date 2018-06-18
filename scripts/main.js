@@ -49,8 +49,7 @@ const addClickEvents = (() => {
   for(let index = 0; index < 9; index++){
     cells[index].addEventListener("click",function(){
       let cellId = this.id[5];
-      console.log(cellId);
-      
+      newGame.move(cellId);
     });
   };
   return true;
@@ -60,7 +59,16 @@ const game = (players) => {
   let turns   = 0;
   let board   = gameBoard;
 
-  return { players, turns, board };
+  const move = (cellId) => {
+    let newMove = players[turns%2].move(board, cellId);
+    displayController.display(board);
+    if (newMove) {
+      turns++;
+      console.log(turns);
+    };
+  };
+
+  return { players, turns, board, move };
 };
 
 let player1 = player("jeff","X");
