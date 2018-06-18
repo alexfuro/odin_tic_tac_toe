@@ -72,7 +72,8 @@ const game = (players) => {
           displayResult("its a tie");
         }
         turns++;
-      };  
+        displayTurn();
+      };
     }
   };
 
@@ -128,7 +129,14 @@ const game = (players) => {
     return true;
   };
 
-  return { players, turns, board, move };
+  const displayTurn = () => {
+    let turnHTML = document.getElementById('turnHTML');
+    turnHTML.innerText = `${players[turns%2].name}'s turn!`;
+    return true;
+  };
+  //initial displayTurn
+  displayTurn();
+  return {  move };
 };
 
 let player1 = player("jeff","X");
