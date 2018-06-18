@@ -10,8 +10,6 @@ const gameBoard = (() => {
 })();
 
 const player = (name, marker) => {
-  let name = name;
-  let marker = marker;
   const move = (board, cellPos) => {
     if (board[cellPos] == ""){
       board[cellPos] = marker;
@@ -52,7 +50,19 @@ const addClickEvents = (() => {
     cells[index].addEventListener("click",function(){
       let cellId = this.id[5];
       console.log(cellId);
+      
     });
   };
   return true;
 })();
+
+const game = (players) => {
+  let turns   = 0;
+  let board   = gameBoard;
+
+  return { players, turns, board };
+};
+
+let player1 = player("jeff","X");
+let player2 = player("jane","O");
+let newGame = game([player1,player2]);
