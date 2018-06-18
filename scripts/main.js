@@ -61,17 +61,19 @@ const game = (players) => {
   let gameOver = false;
 
   const move = (cellId) => {
-    let newMove = players[turns%2].move(board, cellId);
-    displayController.display(board);
-    if (newMove) {
-      gameOver = checkWinner();
-      if (gameOver) {
-        displayResult(`${players[turns%2].name} won!`);
-      }else if ( turns > 7) {
-        displayResult("its a tie");
-      }
-      turns++;
-    };
+    if (!gameOver) {
+      let newMove = players[turns%2].move(board, cellId);
+      displayController.display(board);
+      if (newMove) {
+        gameOver = checkWinner();
+        if (gameOver) {
+          displayResult(`${players[turns%2].name} won!`);
+        }else if ( turns > 7) {
+          displayResult("its a tie");
+        }
+        turns++;
+      };  
+    }
   };
 
   //helper method for checkWinner
