@@ -8,3 +8,17 @@ const gameBoard = (() => {
   };
   return create();
 })();
+
+const player = (name, marker) => {
+  let name = name;
+  let marker = marker;
+  const move = (board, cellPos) => {
+    if (board[cellPos] == ""){
+      board[cellPos] = marker;
+      return true;
+    } else {
+      return false;
+    };
+  };
+  return { name, marker, move }
+};
