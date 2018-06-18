@@ -63,11 +63,57 @@ const game = (players) => {
     let newMove = players[turns%2].move(board, cellId);
     displayController.display(board);
     if (newMove) {
+      console.log(checkWinner());
       turns++;
-      console.log(turns);
     };
   };
 
+  //helper method for checkWinner
+  const checkMark   = (currentMark) => {
+    let playerMarker = players[turns%2].marker;
+
+    return currentMark == playerMarker;
+  };
+
+  const checkWinner = () => {
+    //check columns for a winner;
+    let column1 = [board[0],board[3],board[6]];
+    let column2 = [board[1],board[4],board[7]];
+    let column3 = [board[2],board[5],board[8]];
+
+    if (column1.every(checkMark)) {
+      return true;
+    } else if (column2.every(checkMark)) {
+      return true;
+    } else if (column3.every(checkMark)) {
+      return true;
+    }
+
+    //check rows for winner
+    let row1 = [board[0],board[1],board[2]];
+    let row2 = [board[3],board[4],board[5]];
+    let row3 = [board[6],board[7],board[8]];
+
+    if (row1.every(checkMark)) {
+      return true;
+    } else if (row2.every(checkMark)) {
+      return true;
+    } else if (row3.every(checkMark)) {
+      return true;
+    }
+    //check diagonals for winner
+    let diag1 = [board[0],board[4],board[8]];
+    let diag2 = [board[2],board[4],board[6]];
+
+
+    if (diag1.every(checkMark)) {
+      return true;
+    } else if (diag2.every(checkMark)) {
+      return true;
+    }
+
+    return false;
+  }
   return { players, turns, board, move };
 };
 
