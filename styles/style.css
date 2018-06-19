@@ -14,6 +14,8 @@ body{
     font-size: 100px;
     text-align: center;
     background-color: white;
+    border: 2px solid #E0E0E0;
+    box-sizing: border-box;
 }
 .cell:hover {
   background-color: blue;
@@ -98,8 +100,6 @@ form{
     height: 140px;
     font-size: 140px;
     background-color: white;
-    border: 2px solid #E0E0E0;
-    box-sizing: border-box;
   }
   #resultHTML,
   #turnHTML{
@@ -123,8 +123,6 @@ form{
     height: 170px;
     font-size: 170px;
     background-color: white;
-    border: 2px solid #E0E0E0;
-    box-sizing: border-box;
   }
   #resultHTML,
   #turnHTML{

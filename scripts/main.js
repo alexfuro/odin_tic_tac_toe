@@ -126,13 +126,13 @@ const game = (players) => {
     return false;
   }
   const displayResult = (result) => {
-    let resultHTML = document.getElementById('resultHTML');
+    let resultHTML = document.getElementById("resultHTML");
     resultHTML.innerText = result;
     return true;
   };
 
   const displayTurn = () => {
-    let turnHTML = document.getElementById('turnHTML');
+    let turnHTML = document.getElementById("turnHTML");
     turnHTML.innerText = `${players[turns%2].name}'s turn!`;
     return true;
   };
@@ -143,8 +143,8 @@ const game = (players) => {
 
 const setUp = () => {
   const getPlayerNames = () => {
-    let player1Name = document.getElementsByName('player1Name')[0].value;
-    let player2Name = document.getElementsByName('player2Name')[0].value;
+    let player1Name = document.getElementsByName("player1Name")[0].value;
+    let player2Name = document.getElementsByName("player2Name")[0].value;
     return [player1Name, player2Name]
   };
   const createPlayers = (playerNames) => {
@@ -153,16 +153,16 @@ const setUp = () => {
     return [player1, player2];
   };
   const showGame = () =>{
-    let game = document.getElementsByClassName('game')[0];
+    let game = document.getElementsByClassName("game")[0];
     game.removeAttribute("class","hidden");
     game.setAttribute("class","show");
   };
   const hideSetUpModal = () => {
-    let setUpModal = document.getElementsByClassName('modal-setup')[0];
+    let setUpModal = document.getElementsByClassName("modal-setup")[0];
     setUpModal.setAttribute("class","hidden");
   };
   const displayRematch = () => {
-    let rematchBtn = document.getElementsByTagName('form')[0];
+    let rematchBtn = document.getElementsByTagName("form")[0];
     rematchBtn.setAttribute("class","show");
     return true;
   };
