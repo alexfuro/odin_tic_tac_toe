@@ -91,7 +91,10 @@ button, form input {
     width: 100px;
     height: 100px;
     font-size: 100px;
+<<<<<<< HEAD
     line-height: 140px;
+=======
+>>>>>>> 857a5e6d4f97030711473e459a05cb26ac128c57
   }
   #resultHTML,
   #turnHTML{
