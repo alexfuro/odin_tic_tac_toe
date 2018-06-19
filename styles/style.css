@@ -1,4 +1,5 @@
 body{
+  font-size: 43px;
   background: #E0E0E0;
 }
 #gameBoardHTML{
@@ -21,7 +22,7 @@ body{
 #turnHTML {
   width: 300px;
   margin: 0 auto;
-  font-size: 20px;
+  font-size: 30px;
 }
 .modal-setup{
   display: flex;
@@ -62,4 +63,74 @@ input{
 form{
   width: 300px;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 320px){
+  #gameBoardHTML{
+    width: 100%;
+  }
+  .modal-setup{
+    width: 100%;
+  }
+  .cell{
+    width: 33%;
+    height: 33%;
+  }
+  #resultHTML,
+  #turnHTML{
+
+  }
+  form{
+    width: 300px;
+  }
+}
+@media screen and (max-width: 576px){
+  #gameBoardHTML{
+    width: 420px;
+    height: 420px;
+  }
+  .modal-setup{
+    width: 420px;
+    height: 420px;
+  }
+  .cell{
+    width: 140px;
+    height: 140px;
+    font-size: 140px;
+    background-color: white;
+    border: 2px solid #E0E0E0;
+    box-sizing: border-box;
+  }
+  #resultHTML,
+  #turnHTML{
+
+  }
+  form{
+    width: 420px;
+  }
+}
+@media screen and (min-width: 577px){
+  #gameBoardHTML{
+    width: 510px;
+    height: 510px;
+  }
+  .modal-setup{
+    width: 510px;
+    height: 510px;
+  }
+  .cell{
+    width: 170px;
+    height: 170px;
+    font-size: 170px;
+    background-color: white;
+    border: 2px solid #E0E0E0;
+    box-sizing: border-box;
+  }
+  #resultHTML,
+  #turnHTML{
+
+  }
+  form{
+    width: 510px;
+  }
 }
