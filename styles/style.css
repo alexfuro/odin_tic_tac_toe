@@ -1,5 +1,7 @@
 /* global styles */
 body{
+  margin: 0;
+  padding:0;
   background: #E0E0E0;
 }
 .hidden{
@@ -89,6 +91,7 @@ button, form input {
   .cell{
     width: 33%;
     height: 33%;
+    font-size: 100%;
   }
   #resultHTML,
   #turnHTML{
