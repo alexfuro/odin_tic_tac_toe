@@ -6,10 +6,21 @@
     <link rel="stylesheet" href="styles/style.css">
   </head>
   <body>
-    <p id="turnHTML"></p>
-    <div id="gameBoardHTML">
+    <div class="modal-setup">
+      <div class="setUpUI">
+        <label>Player 1 Name: </label>
+        <input type="text" name="player1Name"><br>
+        <label>Player 2 Name: </label>
+        <input type="text" name="player2Name"><br>
+        <button id="playBtn" onclick="setUp();">Play</button>
+      </div>
     </div>
-    <p id="resultHTML"></p>
+    <div class="game">
+      <p id="turnHTML"></p>
+      <div id="gameBoardHTML">
+      </div>
+      <p id="resultHTML"></p>
+    </div>
     <script src="scripts/main.js"></script>
   </body>
 </html>

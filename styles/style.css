@@ -1,5 +1,5 @@
 body{
-  background: grey;
+  background: #E0E0E0;
 }
 #gameBoardHTML{
   display: flex;
@@ -22,4 +22,39 @@ body{
   width: 300px;
   margin: 0 auto;
   font-size: 20px;
+}
+.modal-setup{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  margin: 20px auto;
+  box-sizing: border-box;
+  background-color: #1E88E5;
+  font-size: 18px;
+  border: 1px solid red;
+}
+.setUpUI{
+  border: 1px solid red;
+  width: 60%;
+  font-size: 24px;
+}
+input{
+  margin: 12px 0;
+  width: 100%;
+  height: 30px;
+  font-size: 24px;
+}
+#playBtn{
+  height: 35px;
+  width: 33%;
+  margin: 0 33%;
+  font-size: 16px;
+  background-color: #F4511E;
+  border: none;
+  border-radius: 6px;
+}
+.game{
+  display: none;
 }
