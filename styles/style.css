@@ -8,6 +8,9 @@ body{
 .show {
   display: block;
 }
+.roundBorder {
+  border-radius: 15px;
+}
 .modal-setup{
   display: flex;
   margin: 20px auto;
@@ -19,11 +22,16 @@ body{
 .setUpHTML{
   width: 90%;
 }
+.setUpHTML,
+.setUpHTML button,
+.setUpHTML input,
+form input{
+  font-size: 24px;
+}
 .setUpHTML input{
   margin: 12px 0;
   width: 100%;
   height: 30px;
-  font-size: 24px;
 }
 .setUpHTML button, form input{
   height: 43px;
@@ -33,9 +41,11 @@ body{
   border: none;
   border-radius: 6px;
 }
+
 #gameBoardHTML{
   display: flex;
   flex-wrap: wrap;
+  border-radius: 15px;
 }
 .cell {
     text-align: center;
@@ -54,6 +64,18 @@ form{
   margin: 0 auto;
 }
 
+/* shadows */
+.modal-setup,
+#gameBoardHTML {
+  box-shadow: 0 15px 10px #616161;
+}
+button,
+input  {
+  box-shadow: 0 5px 5px #616161;
+}
+button, form input {
+  background: -webkit-linear-gradient(#F4511E 90%, #BF360C );
+}
 /* media queries */
 @media screen and (max-width: 320px){
   #gameBoardHTML{
