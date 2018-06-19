@@ -1,17 +1,43 @@
+/* global styles */
 body{
-  font-size: 43px;
   background: #E0E0E0;
+}
+.hidden{
+  display: none;
+}
+.show {
+  display: block;
+}
+.modal-setup{
+  display: flex;
+  margin: 20px auto;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: #1E88E5;
+}
+.setUpHTML{
+  width: 90%;
+}
+.setUpHTML input{
+  margin: 12px 0;
+  width: 100%;
+  height: 30px;
+  font-size: 24px;
+}
+.setUpHTML button, form input{
+  height: 43px;
+  width: 33%;
+  margin: 0 33%;
+  background-color: #F4511E;
+  border: none;
+  border-radius: 6px;
 }
 #gameBoardHTML{
   display: flex;
   flex-wrap: wrap;
-  width: 300px;
-  margin: 20px auto;
 }
 .cell {
-    width: 100px;
-    height: 100px;
-    font-size: 100px;
     text-align: center;
     background-color: white;
     border: 2px solid #E0E0E0;
@@ -22,57 +48,21 @@ body{
 }
 #resultHTML,
 #turnHTML {
-  width: 300px;
   margin: 0 auto;
-  font-size: 30px;
-}
-.modal-setup{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 300px;
-  height: 300px;
-  margin: 20px auto;
-  box-sizing: border-box;
-  background-color: #1E88E5;
-  font-size: 18px;
-}
-.setUpUI{
-  width: 60%;
-  font-size: 24px;
-}
-input{
-  margin: 12px 0;
-  width: 100%;
-  height: 30px;
-  font-size: 24px;
-}
-#playBtn, form input{
-  height: 35px;
-  width: 33%;
-  margin: 0 33%;
-  font-size: 16px;
-  background-color: #F4511E;
-  border: none;
-  border-radius: 6px;
-}
-.hidden{
-  display: none;
-}
-.show {
-  display: block;
 }
 form{
-  width: 300px;
   margin: 0 auto;
 }
 
+/* media queries */
 @media screen and (max-width: 320px){
   #gameBoardHTML{
     width: 100%;
+    margin: 0;
   }
   .modal-setup{
     width: 100%;
+    margin: 0;
   }
   .cell{
     width: 33%;
@@ -80,20 +70,28 @@ form{
   }
   #resultHTML,
   #turnHTML{
-
+    width: 100%;
+    text-align: center;
+    margin:10px auto;
+    font-size: 24px;
   }
   form{
-    width: 300px;
+    width: 100%;
   }
 }
 @media screen and (max-width: 576px){
   #gameBoardHTML{
     width: 420px;
     height: 420px;
+    margin: 0 auto;
   }
   .modal-setup{
     width: 420px;
     height: 420px;
+  }
+  .setUpHTML,
+  .setUpHTML button{
+    font-size: 24px;
   }
   .cell{
     width: 140px;
@@ -103,7 +101,10 @@ form{
   }
   #resultHTML,
   #turnHTML{
-
+    width: 420px;
+    text-align: center;
+    margin:10px auto;
+    font-size: 24px;
   }
   form{
     width: 420px;
@@ -113,10 +114,15 @@ form{
   #gameBoardHTML{
     width: 510px;
     height: 510px;
+    margin: 0 auto;
   }
   .modal-setup{
     width: 510px;
     height: 510px;
+  }
+  .setUpHTML,
+  .setUpHTML button{
+    font-size: 24px;
   }
   .cell{
     width: 170px;
@@ -126,7 +132,10 @@ form{
   }
   #resultHTML,
   #turnHTML{
-
+    width: 510px;
+    text-align: center;
+    margin:10px auto;
+    font-size: 24px;
   }
   form{
     width: 510px;
