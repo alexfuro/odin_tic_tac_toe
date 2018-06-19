@@ -180,4 +180,5 @@ const setUp = () => {
   };
   return { displayRematch };
 };
+
 let newGame = null;
