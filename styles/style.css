@@ -81,27 +81,27 @@ button, form input {
 /* media queries */
 @media screen and (max-width: 320px){
   #gameBoardHTML{
-    width: 100%;
-    margin: 0;
+    width: 300px;
+    margin: 0 auto;
   }
   .modal-setup{
-    width: 100%;
-    margin: 0;
+    width: 300px;
+    margin: 0 auto;
   }
   .cell{
-    width: 33%;
-    height: 33%;
-    font-size: 100%;
+    width: 100px;
+    height: 100px;
+    font-size: 100px;
   }
   #resultHTML,
   #turnHTML{
-    width: 100%;
+    width: 100px;
     text-align: center;
     margin:10px auto;
     font-size: 24px;
   }
   form{
-    width: 100%;
+    width: 100px;
   }
 }
 @media screen and (max-width: 576px){
