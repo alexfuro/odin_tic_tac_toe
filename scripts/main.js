@@ -139,6 +139,32 @@ const game = (players) => {
   return {  move };
 };
 
-let player1 = player("jeff","X");
-let player2 = player("jane","O");
-let newGame = game([player1,player2]);
+const setUp = () => {
+  const getPlayerNames = () => {
+    let player1Name = document.getElementsByName('player1Name')[0].value;
+    let player2Name = document.getElementsByName('player2Name')[0].value;
+    return [player1Name, player2Name]
+  };
+  const createPlayers = (playerNames) => {
+    let player1 = player(playerNames[0],"X");
+    let player2 = player(playerNames[1],"O");
+    return [player1, player2];
+  };
+  const showGame = () =>{
+    let game = document.getElementsByClassName('game')[0];
+    game.removeAttribute("class","hidden");
+    game.setAttribute("class","show");
+  };
+  const hideSetUpModal = () => {
+    let setUpModal = document.getElementsByClassName('modal-setup')[0];
+    setUpModal.setAttribute("class","hidden");
+  };
+  let players = createPlayers(getPlayerNames());
+  newGame = game(players);
+  if(newGame){
+    hideSetUpModal();
+    showGame();
+  };
+  return true;
+};
+let newGame;

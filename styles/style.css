@@ -55,6 +55,9 @@ input{
   border: none;
   border-radius: 6px;
 }
-.game{
+.hidden{
   display: none;
+}
+.show {
+  display: block;
 }
