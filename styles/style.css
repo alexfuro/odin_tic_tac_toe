@@ -33,10 +33,8 @@ body{
   box-sizing: border-box;
   background-color: #1E88E5;
   font-size: 18px;
-  border: 1px solid red;
 }
 .setUpUI{
-  border: 1px solid red;
   width: 60%;
   font-size: 24px;
 }
@@ -46,7 +44,7 @@ input{
   height: 30px;
   font-size: 24px;
 }
-#playBtn{
+#playBtn, form input{
   height: 35px;
   width: 33%;
   margin: 0 33%;
@@ -60,4 +58,8 @@ input{
 }
 .show {
   display: block;
+}
+form{
+  width: 300px;
+  margin: 0 auto;
 }

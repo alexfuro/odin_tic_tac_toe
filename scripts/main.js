@@ -68,8 +68,10 @@ const game = (players) => {
         gameOver = checkWinner();
         if (gameOver) {
           displayResult(`${players[turns%2].name} won!`);
+          setUp().displayRematch();
         }else if ( turns > 7) {
           displayResult("its a tie");
+          setUp().displayRematch();
         }
         turns++;
         displayTurn();
@@ -159,12 +161,23 @@ const setUp = () => {
     let setUpModal = document.getElementsByClassName('modal-setup')[0];
     setUpModal.setAttribute("class","hidden");
   };
-  let players = createPlayers(getPlayerNames());
-  newGame = game(players);
-  if(newGame){
-    hideSetUpModal();
-    showGame();
+  const displayRematch = () => {
+    let rematchBtn = document.getElementsByTagName('form')[0];
+    rematchBtn.setAttribute("class","show");
+    return true;
   };
-  return true;
+  const createGame = () => {
+    let players = createPlayers(getPlayerNames());
+    newGame = game(players);
+    if(newGame){
+      hideSetUpModal();
+      showGame();
+    };
+    return true;
+  };
+  if (newGame == null) {
+    createGame();
+  };
+  return { displayRematch };
 };
-let newGame;
+let newGame = null;
